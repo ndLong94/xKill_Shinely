@@ -13,28 +13,12 @@ public class UserSerivecImp implements UserService {
 	private UserRepository userRepository;
 
 	@Override
-	public void save(User user) {
-		userRepository.save(user);
+	public void login() {
+
 	}
 
 	@Override
-	public void delete(Long id) {
-		userRepository.delete(id);
-	}
+	public void logout() {
 
-	@Override
-	public Iterable<User> findAll() {
-		return userRepository.findAll();
 	}
-
-	@Override
-	public User findById(Long id) {
-		return userRepository.findOne(id);
-	}
-
-	@Override
-	public long count() {
-		return userRepository.count();
-	}
-
 }

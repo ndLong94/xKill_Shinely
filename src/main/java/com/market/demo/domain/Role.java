@@ -13,11 +13,9 @@ public class Role {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "roleid", nullable = false)
-    private Long districtId;
-
-    @Column(name = "userid")
-    private String userId;
+    private Long roleId;
 
     @Column(name = "rolename")
     private String roleName;
+
 }

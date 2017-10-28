@@ -7,12 +7,12 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class MainController {
+public class UserController {
 	@Autowired
     UserService userService;
 	@GetMapping("/")
 	public String index(Model model) {
-//		model.addAttribute("user", userService.findById(Long.valueOf("1")));
+		userService.login();
 		return "hellotest";
 	}
 

@@ -12,7 +12,7 @@ import javax.persistence.*;
 public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "userid", nullable = false)
+    @Column(name = "categoryid")
     private Long categoryId;
 
 

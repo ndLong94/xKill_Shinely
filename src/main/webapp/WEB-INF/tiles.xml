@@ -2,28 +2,28 @@
 <!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 <tiles-definitions>
 	
-	<definition name="default-tenant" template="/WEB-INF/tiles/default-tenant.jsp">
-		<put-attribute name="content" value="/WEB-INF/jsp/default-tenant.jsp" />
+	<definition name="default-tenant" template="tiles/default-tenant.jsp">
+		<put-attribute name="content" value="jsp/default-tenant.jsp" />
 	</definition>
 	
-	<definition name="vm-details" template="/WEB-INF/tiles/VM-details.jsp">
-		<put-attribute name="content" value="/WEB-INF/jsp/vm-details.jsp" />
+	<definition name="vm-details" template="tiles/VM-details.jsp">
+		<put-attribute name="content" value="jsp/vm-details.jsp" />
 	</definition>
 	
-	<definition name="vm-details-timeline" template="/WEB-INF/tiles/VMDetails-Timeline.jsp">
-		<put-attribute name="content" value="/WEB-INF/jsp/vm-details-timeline.jsp" />
+	<definition name="vm-details-timeline" template="tiles/VMDetails-Timeline.jsp">
+		<put-attribute name="content" value="jsp/vm-details-timeline.jsp" />
 	</definition>
 	
-	<definition name="network-page" template="/WEB-INF/tiles/Network.jsp">
-		<put-attribute name="content" value="/WEB-INF/jsp/network-page.jsp" />
+	<definition name="network-page" template="tiles/Network.jsp">
+		<put-attribute name="content" value="jsp/network-page.jsp" />
 	</definition>
 	
-	<definition name="resource-usage" template="/WEB-INF/tiles/Usage-Overview.jsp">
-		<put-attribute name="content" value="/WEB-INF/jsp/resource-usage.jsp" />
+	<definition name="resource-usage" template="tiles/Usage-Overview.jsp">
+		<put-attribute name="content" value="jsp/resource-usage.jsp" />
 	</definition>
 	
-	<definition name="url-page" template="/WEB-INF/tiles/configuration_page.jsp">
-		<put-attribute name="content" value="/WEB-INF/jsp/url-page.jsp" />
+	<definition name="url-page" template="tiles/configuration_page.jsp">
+		<put-attribute name="content" value="jsp/url-page.jsp" />
 	</definition>
 	
 	

@@ -10,7 +10,7 @@ import javax.persistence.*;
 @Table(name = "exchangerate")
 @Getter
 @Setter
-public class Exchangerate {
+public class ExchangeRate {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

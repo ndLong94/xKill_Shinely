@@ -18,8 +18,8 @@ public class Product {
     @Column(name = "ownerid")
     private String ownerId;
 
-    @Column(name = "category")
-    private String category;
+    @Column(name = "categoryid")
+    private String categoryId;
 
     @Column(name = "tiltle")
     private String tiltle;
