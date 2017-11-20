@@ -36,14 +36,14 @@ public class UserService{
     public User findByPhoneNo(String phoneNo) {
         User user = userRepository.findByPhoneNumber(phoneNo);
         if (null == user)
-            throw new IllegalArgumentException("Phone Number Not Found");
+            throw new EntityNotFoundException("Id Not Found");
         return user;
     }
 
     public User findByEmail(String email) {
         User user = userRepository.findByEmail(email);
         if (null == user)
-            throw new IllegalArgumentException("Email is Not Found");
+            throw new EntityNotFoundException("Id Not Found");
         return user;
     }
 

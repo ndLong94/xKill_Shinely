@@ -30,7 +30,7 @@ public class ControllerUtils {
             HttpStatus httpStatus) {
         Map<String, Object> response = new LinkedHashMap<>();
         response.put(RESULT, successResult);
-        return new ResponseEntity<Object>(response, httpStatus);
+        return new ResponseEntity<>(response, httpStatus);
     }
 
     /**
@@ -56,7 +56,7 @@ public class ControllerUtils {
         }
         response.put(ERROR, errorDTO);
 
-        return new ResponseEntity<Object>(response, httpStatus);
+        return new ResponseEntity<>(response, httpStatus);
     }
 
     /**

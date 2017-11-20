@@ -25,12 +25,14 @@ public class UserController {
 	}
 
 	@PostMapping("")
+    @ResponseBody
 	public ResponseEntity<Object> getAllUser() {
         List<User> users = userService.findAllUsers();
         return ControllerUtils.createSuccessResponseEntity(users, HttpStatus.OK);
 	}
 
     @PostMapping("/{id}")
+    @ResponseBody
     public ResponseEntity<Object> findById(@PathVariable("id") Long userId) {
         if (null == userId)
             throw new IllegalArgumentException("Id is not exist");
