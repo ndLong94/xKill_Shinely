@@ -16,7 +16,7 @@ public class District {
     private Long districtId;
 
     @Column(name = "provinceid")
-    private String privinceId;
+    private String provinceId;
 
     @Column(name = "districtname")
     private String districtName;
