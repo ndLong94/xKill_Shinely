@@ -16,10 +16,10 @@ public class Product {
     private Long productId;
 
     @Column(name = "ownerid")
-    private String ownerId;
+    private Long ownerId;
 
     @Column(name = "categoryid")
-    private String categoryId;
+    private Long categoryId;
 
     @Column(name = "tiltle")
     private String tiltle;
@@ -37,7 +37,7 @@ public class Product {
     private String expireDate;
 
     @Column(name = "villageid")
-    private String villageId;
+    private Long villageId;
 
 
 }
