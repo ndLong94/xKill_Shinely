@@ -16,10 +16,10 @@ public class Transaction {
     private Long transactionId;
 
     @Column(name = "userid")
-    private String userId;
+    private Long userId;
 
     @Column(name = "exchangerateid")
-    private String exchangerateId;
+    private Long exchangerateId;
 
     @Column(name = "dayofcharge")
     private String dayOfCharge;

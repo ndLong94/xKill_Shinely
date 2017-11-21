@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class UserController {
 	@Autowired
     UserService userService;
-	@GetMapping("/")
+	@GetMapping("/hellotest")
 	public String index(Model model) {
 		userService.login();
 		return "hellotest";

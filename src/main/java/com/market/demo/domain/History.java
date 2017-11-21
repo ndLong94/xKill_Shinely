@@ -17,7 +17,7 @@ public class History {
     private Long historyId;
 
     @Column(name = "userid")
-    private String userId;
+    private Long userId;
 
     @Column(name = "deductcoin")
     private String deductCoin;
