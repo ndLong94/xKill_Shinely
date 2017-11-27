@@ -1,6 +1,5 @@
 package com.market.demo.repository;
 
-import com.market.demo.domain.Category;
 import com.market.demo.domain.History;
 import org.springframework.data.repository.CrudRepository;
 
