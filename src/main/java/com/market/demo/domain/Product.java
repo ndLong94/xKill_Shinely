@@ -1,5 +1,6 @@
 package com.market.demo.domain;
 
+import com.market.demo.Form.ProductForm;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -39,17 +40,16 @@ public class Product {
     @Column(name = "villageid")
     private Long villageId;
 
-	public Product(Long ownerId, Long categoryId, String title, String description, String quantity, String postDate,
-			String expireDate, Long villageId) {
+	public Product(ProductForm productForm) {
 		super();
-		this.ownerId = ownerId;
-		this.categoryId = categoryId;
-		this.title = title;
-		this.description = description;
-		this.quantity = quantity;
-		this.postDate = postDate;
-		this.expireDate = expireDate;
-		this.villageId = villageId;
+		this.ownerId = productForm.getOwnerId();
+		this.categoryId = productForm.getCategoryId();
+		this.title = productForm.getTitle();
+		this.description = productForm.getDescription();
+		this.quantity = productForm.getQuantity();
+		this.postDate = productForm.getPostDate();
+		this.expireDate = productForm.getExpireDate();
+		this.villageId = productForm.getVillageId();
 	}
 
 	public Product() {

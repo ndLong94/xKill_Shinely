@@ -6,18 +6,20 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 public interface ProductRepository extends CrudRepository<Product, Long> {
 	
 	@Query(value = "select * from product where ownerId=?1" , nativeQuery = true)
-	Product findByOwnerId(Long ownerId);
+	List<Product> findByOwnerId(Long ownerId);
 	
 	@Query(value = "select * from product where provinceId=?1" , nativeQuery = true)
-	Product findByProvinceId(Long provinceId);
+	List<Product> findByProvinceId(Long provinceId);
 	
 	@Query(value = "select * from product where villageId=?1" , nativeQuery = true)
-	Product findByVillageId(Long villageId);
+	List<Product> findByVillageId(Long villageId);
 	
 	@Query(value = "select * from product where categoryId=?1" , nativeQuery = true)
-	Product findByCategoryId(Long categoryId);
+	List<Product> findByCategoryId(Long categoryId);
 }
