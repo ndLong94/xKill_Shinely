@@ -71,8 +71,13 @@ public class ControllerUtils {
     public static ResponseEntity<Object> createSuccessResponseEntity(Object successResult, HttpStatus httpStatus) {
         return new ResponseEntity<>(successResult, httpStatus);
     }
+    
+    public static ResponseEntity<Object> deleteSuccessResponseEntity(Long ObjectId, HttpStatus httpStatus) {
+        return new ResponseEntity<>(ObjectId, httpStatus);
+    }
 
     private ControllerUtils() {
         throw new IllegalAccessError("Utility class");
     }
+
 }

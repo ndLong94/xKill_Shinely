@@ -1,5 +1,7 @@
 package com.market.demo.controller.Product;
 
+import java.util.List;
+
 import javax.persistence.EntityNotFoundException;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +15,18 @@ public class ProductService {
 
 	@Autowired
 	private ProductRepository productRepository;
+	
+	public void save(Product product) {
+        productRepository.save(product);
+    }
+	
+	public void delete(Long productId) {
+        productRepository.delete(productId);
+    }
+	
+	public List<Product> findAllProducts() {
+        return (List<Product>) productRepository.findAll();
+    }
 	
 	public Product findById(Long productId) {
 		Product product = productRepository.findOne(productId);

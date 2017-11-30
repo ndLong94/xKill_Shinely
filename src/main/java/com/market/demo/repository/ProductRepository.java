@@ -12,6 +12,7 @@ public interface ProductRepository extends CrudRepository<Product, Long> {
 	@Query(value = "select * from product where ownerId=?1" , nativeQuery = true)
 	Product findByOwnerId(Long ownerId);
 	
+	@Query(value = "select * from product where provinceId=?1" , nativeQuery = true)
 	Product findByProvinceId(Long provinceId);
 	
 	@Query(value = "select * from product where villageId=?1" , nativeQuery = true)
