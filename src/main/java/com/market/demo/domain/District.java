@@ -5,6 +5,8 @@ import lombok.Setter;
 
 import javax.persistence.*;
 
+import com.market.demo.model.DistrictForm;
+
 @Entity
 @Table(name = "district")
 @Getter
@@ -20,5 +22,14 @@ public class District {
 
     @Column(name = "districtname")
     private String districtName;
+    
+    public District(DistrictForm districtForm) {
+		this.provinceId = districtForm.getProvinceId();
+		this.districtName = districtForm.getDistrictName();
+	}
+    
+	public District() {
+		super();
+	}
 
 }

@@ -2,7 +2,6 @@ package com.market.demo.controller.Product;
 
 import java.util.List;
 
-import com.market.demo.Form.ProductForm;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -13,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import com.market.demo.config.Controller.ControllerUtils;
 import com.market.demo.controller.User.UserService;
 import com.market.demo.domain.Product;
+import com.market.demo.model.ProductForm;
 
 import javax.validation.Valid;
 
@@ -36,14 +36,29 @@ public class ProductController {
         return ControllerUtils.createSuccessResponseEntity(products, HttpStatus.OK);
 	}
 	
-	@PutMapping("")
+	@PostMapping("/{productId}")
+    @ResponseBody
+    public ResponseEntity<Object> findById(@PathVariable("productId") Long productId) {
+        if (null == productId)
+            throw new IllegalArgumentException("Product Id is not exist");
+        Product product = productService.findById(productId);
+        return ControllerUtils.createSuccessResponseEntity(product, HttpStatus.OK);
+    }
+	
+	@PutMapping("/add")
 	public String addProduct(@RequestBody @Valid ProductForm productForm) {
 			productService.save(new Product(productForm));
 		return "redirect:/product";
 	}
 	
+	@PutMapping("/update")
+	public String updateProduct(@RequestBody @Valid ProductForm productForm) {
+			productService.save(new Product(productForm));
+		return "redirect:/product";
+	}
+	
 	@DeleteMapping("/delete/{productId}")
-	public ResponseEntity<Object> deleteArticle(@PathVariable("productId") Long productId) {
+	public ResponseEntity<Object> deleteProduct(@PathVariable("productId") Long productId) {
 		if (null == productId)
 			throw new IllegalArgumentException("Product Id is not exist");
 			productService.delete(productId);

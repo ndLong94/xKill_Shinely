@@ -1,10 +1,11 @@
 package com.market.demo.domain;
 
-import com.market.demo.Form.ProductForm;
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+
+import com.market.demo.model.ProductForm;
 
 @Entity
 @Table(name = "product")

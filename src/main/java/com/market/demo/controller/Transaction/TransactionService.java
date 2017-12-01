@@ -1,10 +1,13 @@
 package com.market.demo.controller.Transaction;
 
+import java.util.List;
+
 import javax.persistence.EntityNotFoundException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.market.demo.domain.Province;
 import com.market.demo.domain.Transaction;
 import com.market.demo.repository.TransactionRepository;
 
@@ -34,4 +37,16 @@ public class TransactionService {
             throw new EntityNotFoundException("exchangerateId Not Found");
         return transaction;
     }
+
+	public void save(Transaction transaction) {
+		transactionRepository.save(transaction);
+	}
+
+	public void delete(Long transactionId) {
+		transactionRepository.delete(transactionId);		
+	}
+
+	public List<Transaction> findAllTransactions() {
+		return (List<Transaction>) transactionRepository.findAll();
+	}
 }

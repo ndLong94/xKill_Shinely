@@ -5,6 +5,8 @@ import lombok.Setter;
 
 import javax.persistence.*;
 
+import com.market.demo.model.CategoryForm;
+
 @Entity
 @Table(name = "category")
 @Getter
@@ -22,6 +24,14 @@ public class Category {
     @Column(name = "cost")
     private String cost;
 
+	public Category() {
+		super();
+	}
 
+	public Category(CategoryForm categoryForm) {
+		super();
+		this.categoryName = categoryForm.getCategoryName();
+		this.cost = categoryForm.getCost();
+	}
 
 }

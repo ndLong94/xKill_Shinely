@@ -1,10 +1,13 @@
 package com.market.demo.controller.District;
 
+import java.util.List;
+
 import javax.persistence.EntityNotFoundException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.market.demo.domain.Category;
 import com.market.demo.domain.District;
 import com.market.demo.repository.DistrictRepository;
 
@@ -33,5 +36,18 @@ public class DistrictService {
             throw new EntityNotFoundException("provinceId Not Found");
         return district;
     }
+
+	public List<District> findAllCategorys() {
+		return (List<District>) districtRepository.findAll();
+	}
+
+	public void save(District district) {
+		districtRepository.save(district);	
+	}
+
+	public void delete(Long districtId) {
+		districtRepository.delete(districtId);
+		
+	}
 	
 }

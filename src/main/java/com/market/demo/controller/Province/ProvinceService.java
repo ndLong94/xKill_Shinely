@@ -1,10 +1,13 @@
 package com.market.demo.controller.Province;
 
+import java.util.List;
+
 import javax.persistence.EntityNotFoundException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.market.demo.domain.District;
 import com.market.demo.domain.Province;
 import com.market.demo.repository.ProvinceRepository;
 
@@ -20,5 +23,17 @@ public class ProvinceService {
             throw new EntityNotFoundException("provinceId Not Found");
         return province;
     }
+
+	public List<Province> findAllProvinces() {
+		return (List<Province>) provinceRepository.findAll();
+	}
+
+	public void save(Province province) {
+		provinceRepository.save(province);
+	}
+
+	public void delete(Long provinceId) {
+		provinceRepository.delete(provinceId);
+	}
 	
 }
