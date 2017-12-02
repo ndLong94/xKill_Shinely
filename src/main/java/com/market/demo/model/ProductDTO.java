@@ -7,7 +7,7 @@ import javax.validation.constraints.NotNull;
 
 @Getter
 @Setter
-public class ProductForm {
+public class ProductDTO {
     @NotNull(message = "Owner Id cannot be null")
     private Long ownerId;
     

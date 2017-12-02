@@ -7,7 +7,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class HistoryForm {
+public class HistoryDTO {
 	
 	@NotNull(message = "User cannot be null")
     private Long userId;

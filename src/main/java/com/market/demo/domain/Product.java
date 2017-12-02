@@ -5,7 +5,7 @@ import lombok.Setter;
 
 import javax.persistence.*;
 
-import com.market.demo.model.ProductForm;
+import com.market.demo.model.ProductDTO;
 
 @Entity
 @Table(name = "product")
@@ -41,16 +41,16 @@ public class Product {
     @Column(name = "villageid")
     private Long villageId;
 
-	public Product(ProductForm productForm) {
+	public Product(ProductDTO product) {
 		super();
-		this.ownerId = productForm.getOwnerId();
-		this.categoryId = productForm.getCategoryId();
-		this.title = productForm.getTitle();
-		this.description = productForm.getDescription();
-		this.quantity = productForm.getQuantity();
-		this.postDate = productForm.getPostDate();
-		this.expireDate = productForm.getExpireDate();
-		this.villageId = productForm.getVillageId();
+		this.ownerId = product.getOwnerId();
+		this.categoryId = product.getCategoryId();
+		this.title = product.getTitle();
+		this.description = product.getDescription();
+		this.quantity = product.getQuantity();
+		this.postDate = product.getPostDate();
+		this.expireDate = product.getExpireDate();
+		this.villageId = product.getVillageId();
 	}
 
 	public Product() {

@@ -7,8 +7,10 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class UserForm {
-	
+public class UserDTO {
+
+	private Long userId;
+
 	@NotNull(message = "First Name cannot be null")
 	private String firstName;
 	

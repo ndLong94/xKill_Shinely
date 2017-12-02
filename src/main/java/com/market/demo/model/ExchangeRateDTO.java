@@ -7,7 +7,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class ExchangeRateForm {
+public class ExchangeRateDTO {
 	
 	@NotNull(message = "Type cannot be null")
 	private String type;

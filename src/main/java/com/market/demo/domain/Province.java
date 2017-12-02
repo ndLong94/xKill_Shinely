@@ -6,7 +6,7 @@ import lombok.Setter;
 
 import javax.persistence.*;
 
-import com.market.demo.model.ProvinceForm;
+import com.market.demo.model.ProvinceDTO;
 
 @Entity
 @Table(name = "province")
@@ -21,8 +21,8 @@ public class Province {
     @Column(name = "provincename")
     private String provinceName;
     
-    public Province(ProvinceForm provinceForm) {
-		this.provinceName = provinceForm.getProvinceName();
+    public Province(ProvinceDTO provinceDTO) {
+		this.provinceName = provinceDTO.getProvinceName();
 	}
 
 	public Province() {

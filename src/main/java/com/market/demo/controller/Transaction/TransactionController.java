@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.market.demo.config.Controller.ControllerUtils;
 import com.market.demo.domain.Transaction;
-import com.market.demo.model.TransactionForm;
+import com.market.demo.model.TransactionDTO;
 
 @Controller
 @RequestMapping("transaction")
@@ -48,14 +48,14 @@ public class TransactionController {
 	}
 
 	@PutMapping("/add")
-	public String addTransaction(@RequestBody @Valid TransactionForm transactionForm) {
-		transactionService.save(new Transaction(transactionForm));
+	public String addTransaction(@RequestBody @Valid TransactionDTO transaction) {
+		transactionService.save(new Transaction(transaction));
 		return "redirect:/transaction";
 	}
 
 	@PutMapping("/update")
-	public String updateTransaction(@RequestBody @Valid TransactionForm transactionForm) {
-		transactionService.save(new Transaction(transactionForm));
+	public String updateTransaction(@RequestBody @Valid TransactionDTO transaction) {
+		transactionService.save(new Transaction(transaction));
 		return "redirect:/transaction";
 	}
 

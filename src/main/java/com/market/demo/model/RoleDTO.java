@@ -7,7 +7,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class RoleForm {
+public class RoleDTO {
 	
 	@NotNull(message = "Role Name cannot be null")
 	private String roleName;

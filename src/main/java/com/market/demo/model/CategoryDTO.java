@@ -7,7 +7,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class CategoryForm {
+public class CategoryDTO {
 	
 	@NotNull(message = "Category Name cannot be null")
 	private String categoryName;

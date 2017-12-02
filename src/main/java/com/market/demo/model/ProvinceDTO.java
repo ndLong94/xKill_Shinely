@@ -7,7 +7,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class ProvinceForm {
+public class ProvinceDTO {
 
 	@NotNull(message = "Province Name cannot be null")
 	private String provinceName;

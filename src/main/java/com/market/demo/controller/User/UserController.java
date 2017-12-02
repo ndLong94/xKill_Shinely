@@ -1,9 +1,8 @@
 package com.market.demo.controller.User;
 
 import com.market.demo.config.Controller.ControllerUtils;
-import com.market.demo.domain.Product;
 import com.market.demo.domain.User;
-import com.market.demo.model.UserForm;
+import com.market.demo.model.UserDTO;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -13,8 +12,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-import javax.ws.rs.GET;
-import javax.ws.rs.PathParam;
 import java.util.List;
 
 @Controller
@@ -45,14 +42,14 @@ public class UserController {
     }
     
     @PutMapping("/add")
-	public String addUser(@RequestBody @Valid UserForm userForm) {
-    	userService.save(new User(userForm));
+	public String addUser(@RequestBody @Valid UserDTO user) {
+    	userService.save(new User(user));
 		return "redirect:/user";
 	}
 	
 	@PutMapping("/update")
-	public String updateUser(@RequestBody @Valid UserForm userForm) {
-		userService.save(new User(userForm));
+	public String updateUser(@RequestBody @Valid UserDTO user) {
+		userService.save(new User(user));
 		return "redirect:/product";
 	}
 	

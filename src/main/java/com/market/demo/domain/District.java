@@ -5,7 +5,7 @@ import lombok.Setter;
 
 import javax.persistence.*;
 
-import com.market.demo.model.DistrictForm;
+import com.market.demo.model.DistrictDTO;
 
 @Entity
 @Table(name = "district")
@@ -23,9 +23,9 @@ public class District {
     @Column(name = "districtname")
     private String districtName;
     
-    public District(DistrictForm districtForm) {
-		this.provinceId = districtForm.getProvinceId();
-		this.districtName = districtForm.getDistrictName();
+    public District(DistrictDTO district) {
+		this.provinceId = district.getProvinceId();
+		this.districtName = district.getDistrictName();
 	}
     
 	public District() {

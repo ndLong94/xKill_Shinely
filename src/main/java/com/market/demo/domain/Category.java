@@ -5,7 +5,7 @@ import lombok.Setter;
 
 import javax.persistence.*;
 
-import com.market.demo.model.CategoryForm;
+import com.market.demo.model.CategoryDTO;
 
 @Entity
 @Table(name = "category")
@@ -28,10 +28,10 @@ public class Category {
 		super();
 	}
 
-	public Category(CategoryForm categoryForm) {
+	public Category(CategoryDTO category) {
 		super();
-		this.categoryName = categoryForm.getCategoryName();
-		this.cost = categoryForm.getCost();
+		this.categoryName = category.getCategoryName();
+		this.cost = category.getCost();
 	}
 
 }

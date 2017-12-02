@@ -1,11 +1,10 @@
 package com.market.demo.domain;
 
+import com.market.demo.model.UserDTO;
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
-
-import com.market.demo.model.UserForm;
 
 import java.io.Serializable;
 
@@ -46,16 +45,17 @@ public class User implements Serializable {
 	@Column(name = "email")
 	private String email;
 	
-	public User(UserForm userForm) {
+	public User(UserDTO user) {
 		super();
-		this.firstName = userForm.getFirstName();
-		this.midName = userForm.getMidName();
-		this.lastName = userForm.getLastName();
-		this.password = userForm.getPassword();
-		this.userName = userForm.getUserName();
-		this.phoneNumber = userForm.getPhoneNumber();
-		this.coin = userForm.getCoin();
-		this.email = userForm.getEmail();
+		this.userId = user.getUserId();
+		this.firstName = user.getFirstName();
+		this.midName = user.getMidName();
+		this.lastName = user.getLastName();
+		this.password = user.getPassword();
+		this.userName = user.getUserName();
+		this.phoneNumber = user.getPhoneNumber();
+		this.coin = user.getCoin();
+		this.email = user.getEmail();
 	}
 	
 	public User() {

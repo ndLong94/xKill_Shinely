@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.market.demo.config.Controller.ControllerUtils;
 import com.market.demo.domain.District;
-import com.market.demo.model.DistrictForm;
+import com.market.demo.model.DistrictDTO;
 
 @Controller
 @RequestMapping("district")
@@ -48,14 +48,14 @@ public class DistrictController {
 	}
 
 	@PutMapping("/add")
-	public String addDistrict(@RequestBody @Valid DistrictForm districtForm) {
-		districtService.save(new District(districtForm));
+	public String addDistrict(@RequestBody @Valid DistrictDTO district) {
+		districtService.save(new District(district));
 		return "redirect:/district";
 	}
 
 	@PutMapping("/update")
-	public String updateDistrict(@RequestBody @Valid DistrictForm districtForm) {
-		districtService.save(new District(districtForm));
+	public String updateDistrict(@RequestBody @Valid DistrictDTO district) {
+		districtService.save(new District(district));
 		return "redirect:/district";
 	}
 

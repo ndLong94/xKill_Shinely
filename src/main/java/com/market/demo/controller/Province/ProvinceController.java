@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.market.demo.config.Controller.ControllerUtils;
 import com.market.demo.domain.Province;
-import com.market.demo.model.ProvinceForm;
+import com.market.demo.model.ProvinceDTO;
 
 @Controller
 @RequestMapping("province")
@@ -48,14 +48,14 @@ public class ProvinceController {
 	}
 
 	@PutMapping("/add")
-	public String addProvince(@RequestBody @Valid ProvinceForm provinceForm) {
-		provinceService.save(new Province(provinceForm));
+	public String addProvince(@RequestBody @Valid ProvinceDTO province) {
+		provinceService.save(new Province(province));
 		return "redirect:/province";
 	}
 
 	@PutMapping("/update")
-	public String updateProvince(@RequestBody @Valid ProvinceForm provinceForm) {
-		provinceService.save(new Province(provinceForm));
+	public String updateProvince(@RequestBody @Valid ProvinceDTO province) {
+		provinceService.save(new Province(province));
 		return "redirect:/province";
 	}
 

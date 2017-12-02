@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.market.demo.config.Controller.ControllerUtils;
 import com.market.demo.domain.Category;
-import com.market.demo.model.CategoryForm;
+import com.market.demo.model.CategoryDTO;
 
 @Controller
 @RequestMapping("category")
@@ -48,14 +48,14 @@ public class CategoryController {
 	}
 
 	@PutMapping("/add")
-	public String addCategory(@RequestBody @Valid CategoryForm categoryForm) {
-		categoryService.save(new Category(categoryForm));
+	public String addCategory(@RequestBody @Valid CategoryDTO category) {
+		categoryService.save(new Category(category));
 		return "redirect:/category";
 	}
 
 	@PutMapping("/update")
-	public String updateCategory(@RequestBody @Valid CategoryForm categoryForm) {
-		categoryService.save(new Category(categoryForm));
+	public String updateCategory(@RequestBody @Valid CategoryDTO category) {
+		categoryService.save(new Category(category));
 		return "redirect:/category";
 	}
 

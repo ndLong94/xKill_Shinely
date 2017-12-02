@@ -5,7 +5,7 @@ import lombok.Setter;
 
 import javax.persistence.*;
 
-import com.market.demo.model.TransactionForm;
+import com.market.demo.model.TransactionDTO;
 
 @Entity
 @Table(name = "transaction")
@@ -26,10 +26,10 @@ public class Transaction {
     @Column(name = "dayofcharge")
     private String dayOfCharge;
     
-    public Transaction(TransactionForm transactionForm) {
-    	this.userId = transactionForm.getUserId();
-		this.exchangerateId = transactionForm.getExchangerateId();
-		this.dayOfCharge = transactionForm.getDayOfCharge();
+    public Transaction(TransactionDTO transaction) {
+    	this.userId = transaction.getTransactionId();
+		this.exchangerateId = transaction.getExchangerateId();
+		this.dayOfCharge = transaction.getDayOfCharge();
 	}
 
 	public Transaction() {

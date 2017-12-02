@@ -7,7 +7,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class DistrictForm {
+public class DistrictDTO {
 	
 	@NotNull(message = "Province Id cannot be null")
 	private Long provinceId;

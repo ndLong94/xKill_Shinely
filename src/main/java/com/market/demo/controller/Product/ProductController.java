@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import com.market.demo.config.Controller.ControllerUtils;
 import com.market.demo.controller.User.UserService;
 import com.market.demo.domain.Product;
-import com.market.demo.model.ProductForm;
+import com.market.demo.model.ProductDTO;
 
 import javax.validation.Valid;
 
@@ -46,14 +46,14 @@ public class ProductController {
     }
 	
 	@PutMapping("/add")
-	public String addProduct(@RequestBody @Valid ProductForm productForm) {
-			productService.save(new Product(productForm));
+	public String addProduct(@RequestBody @Valid ProductDTO product) {
+			productService.save(new Product(product));
 		return "redirect:/product";
 	}
 	
 	@PutMapping("/update")
-	public String updateProduct(@RequestBody @Valid ProductForm productForm) {
-			productService.save(new Product(productForm));
+	public String updateProduct(@RequestBody @Valid ProductDTO product) {
+			productService.save(new Product(product));
 		return "redirect:/product";
 	}
 	
