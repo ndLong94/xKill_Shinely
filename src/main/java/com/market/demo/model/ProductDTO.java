@@ -5,6 +5,8 @@ import lombok.Setter;
 
 import javax.validation.constraints.NotNull;
 
+import org.springframework.web.multipart.MultipartFile;
+
 @Getter
 @Setter
 public class ProductDTO {
@@ -26,5 +28,8 @@ public class ProductDTO {
     private String expireDate;
     
     private Long villageId;
-
+    
+    private  MultipartFile[] fileuploads;
+    
+    private  byte[] fileDB;
 }

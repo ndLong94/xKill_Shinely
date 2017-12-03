@@ -40,7 +40,10 @@ public class Product {
 
     @Column(name = "villageid")
     private Long villageId;
-
+    
+    @Column(name = "fileupload")
+    private byte[] fileUpload;
+    
 	public Product(ProductDTO product) {
 		super();
 		this.ownerId = product.getOwnerId();
@@ -51,6 +54,7 @@ public class Product {
 		this.postDate = product.getPostDate();
 		this.expireDate = product.getExpireDate();
 		this.villageId = product.getVillageId();
+		this.fileUpload = product.getFileDB();
 	}
 
 	public Product() {
