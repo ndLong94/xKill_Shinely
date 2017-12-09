@@ -4,7 +4,6 @@ import java.util.List;
 
 import javax.validation.Valid;
 
-import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,7 +19,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.market.demo.config.Controller.ControllerUtils;
 import com.market.demo.domain.Category;
-import com.market.demo.model.CategoryDTO;
+import com.market.demo.dto.CategoryDTO;
 
 @Controller
 @RequestMapping("category")
@@ -29,7 +28,6 @@ public class CategoryController {
 	@Autowired
 	CategoryService categoryService;
 
-	private static final Logger m_logger = Logger.getLogger(Category.class);
 
 	@GetMapping("")
 	@ResponseBody
@@ -48,15 +46,15 @@ public class CategoryController {
 	}
 
 	@PutMapping("/add")
-	public String addCategory(@RequestBody @Valid CategoryDTO category) {
-		categoryService.save(new Category(category));
-		return "redirect:/category";
+	public ResponseEntity<Object> addCategory(@RequestBody @Valid CategoryDTO category) {
+		categoryService.saveOrUpdate(new Category(category));
+		return ControllerUtils.createSuccessResponseEntity("Save successfully", HttpStatus.OK);
 	}
 
-	@PutMapping("/update")
-	public String updateCategory(@RequestBody @Valid CategoryDTO category) {
-		categoryService.save(new Category(category));
-		return "redirect:/category";
+	@PutMapping("/update/{id}")
+	public ResponseEntity<Object> updateCategory(@RequestBody @Valid CategoryDTO category, @PathVariable("id") Long id) {
+		categoryService.saveOrUpdate(new Category(category, id));
+		return ControllerUtils.createSuccessResponseEntity("Update successfully", HttpStatus.OK);
 	}
 
 	@DeleteMapping("/delete/{categoryId}")

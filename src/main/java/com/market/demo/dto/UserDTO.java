@@ -1,15 +1,14 @@
-package com.market.demo.model;
+package com.market.demo.dto;
 
 import javax.validation.constraints.NotNull;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
 public class UserDTO {
-
-	private Long userId;
 
 	@NotNull(message = "First Name cannot be null")
 	private String firstName;
@@ -18,7 +17,8 @@ public class UserDTO {
 	
 	@NotNull(message = "Last Name cannot be null")
 	private String lastName;
-	
+
+	@JsonIgnore
 	@NotNull(message = "Password cannot be null")
 	private String password;
 	

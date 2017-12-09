@@ -21,4 +21,12 @@ public class UserRole {
     @Column(name = "roleid")
     private Long roleId;
 
+    public String getRoleStr(){
+        if (1 == roleId)
+            return "admin";
+        if (2 == roleId)
+            return "user";
+        return "undefined";
+    }
+
 }

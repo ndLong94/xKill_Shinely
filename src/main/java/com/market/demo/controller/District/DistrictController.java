@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.market.demo.config.Controller.ControllerUtils;
 import com.market.demo.domain.District;
-import com.market.demo.model.DistrictDTO;
+import com.market.demo.dto.DistrictDTO;
 
 @Controller
 @RequestMapping("district")

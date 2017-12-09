@@ -6,7 +6,7 @@ import lombok.Setter;
 
 import javax.persistence.*;
 
-import com.market.demo.model.ProvinceDTO;
+import com.market.demo.dto.ProvinceDTO;
 
 @Entity
 @Table(name = "province")

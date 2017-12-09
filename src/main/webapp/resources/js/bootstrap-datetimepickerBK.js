@@ -1506,11 +1506,11 @@
 
         picker.date = function (newDate) {
             ///<signature helpKeyword="$.fn.datetimepicker.date">
-            ///<summary>Returns the component's model current date, a moment object or null if not set.</summary>
+            ///<summary>Returns the component's dto current date, a moment object or null if not set.</summary>
             ///<returns type="Moment">date.clone()</returns>
             ///</signature>
             ///<signature>
-            ///<summary>Sets the components model current moment to it. Passing a null value unsets the components model current moment. Parsing of the newDate parameter is made using moment library with the options.format and options.useStrict components configuration.</summary>
+            ///<summary>Sets the components dto current moment to it. Passing a null value unsets the components dto current moment. Parsing of the newDate parameter is made using moment library with the options.format and options.useStrict components configuration.</summary>
             ///<param name="newDate" locid="$.fn.datetimepicker.date_p:newDate">Takes string, Date, moment, null parameter.</param>
             ///</signature>
             if (arguments.length === 0) {
@@ -2304,7 +2304,7 @@
             return picker;
         };
         /**
-         * Returns the component's model current viewDate, a moment object or null if not set. Passing a null value unsets the components model current moment. Parsing of the newDate parameter is made using moment library with the options.format and options.useStrict components configuration.
+         * Returns the component's dto current viewDate, a moment object or null if not set. Passing a null value unsets the components dto current moment. Parsing of the newDate parameter is made using moment library with the options.format and options.useStrict components configuration.
          * @param {Takes string, viewDate, moment, null parameter.} newDate
          * @returns {viewDate.clone()}
          */

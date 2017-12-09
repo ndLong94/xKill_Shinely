@@ -5,7 +5,7 @@ import lombok.Setter;
 
 import javax.persistence.*;
 
-import com.market.demo.model.TransactionDTO;
+import com.market.demo.dto.TransactionDTO;
 
 @Entity
 @Table(name = "transaction")

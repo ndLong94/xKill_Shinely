@@ -20,7 +20,7 @@ public class ProvinceService {
 	public Province findById(Long provinceId) {
 		Province province = provinceRepository.findOne(provinceId);
 	    if (null == province)
-            throw new EntityNotFoundException("provinceId Not Found");
+            throw new EntityNotFoundException("Province Not Found");
         return province;
     }
 

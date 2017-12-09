@@ -15,9 +15,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import com.market.demo.config.Controller.ControllerUtils;
 import com.market.demo.controller.User.UserService;
 import com.market.demo.domain.Product;
-import com.market.demo.model.ProductDTO;
-
-import javax.validation.Valid;
+import com.market.demo.dto.ProductDTO;
 
 @Controller
 @RequestMapping("product")

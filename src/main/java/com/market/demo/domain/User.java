@@ -1,6 +1,6 @@
 package com.market.demo.domain;
 
-import com.market.demo.model.UserDTO;
+import com.market.demo.dto.UserDTO;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -47,7 +47,6 @@ public class User implements Serializable {
 	
 	public User(UserDTO user) {
 		super();
-		this.userId = user.getUserId();
 		this.firstName = user.getFirstName();
 		this.midName = user.getMidName();
 		this.lastName = user.getLastName();

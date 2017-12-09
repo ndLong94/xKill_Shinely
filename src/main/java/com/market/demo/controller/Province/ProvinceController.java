@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.market.demo.config.Controller.ControllerUtils;
 import com.market.demo.domain.Province;
-import com.market.demo.model.ProvinceDTO;
+import com.market.demo.dto.ProvinceDTO;
 
 @Controller
 @RequestMapping("province")

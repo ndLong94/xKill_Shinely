@@ -6,13 +6,14 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 public interface UserRoleRepository extends CrudRepository<UserRole, Long> {
+	@Query(value = "select * from userrole where userid = ?1", nativeQuery = true)
+	List<UserRole> findByUserId(Long userId);
+
+	List<UserRole> findByRoleId(Long roleId);
 	
-	@Query(value = "select * from userRole  where userId=?1" , nativeQuery = true)
-	UserRole findByUserId(Long userId);
-	
-	@Query(value = "select * from userRole  where provinceId=?1" , nativeQuery = true)
-	UserRole findByRoleId(Long provinceId);
-	
+
 }

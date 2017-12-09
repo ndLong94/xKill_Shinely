@@ -2,7 +2,7 @@ package com.market.demo.controller.User;
 
 import com.market.demo.config.Controller.ControllerUtils;
 import com.market.demo.domain.User;
-import com.market.demo.model.UserDTO;
+import com.market.demo.dto.UserDTO;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

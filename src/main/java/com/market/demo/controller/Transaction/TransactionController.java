@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.market.demo.config.Controller.ControllerUtils;
 import com.market.demo.domain.Transaction;
-import com.market.demo.model.TransactionDTO;
+import com.market.demo.dto.TransactionDTO;
 
 @Controller
 @RequestMapping("transaction")
