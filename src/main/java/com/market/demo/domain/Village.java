@@ -1,13 +1,14 @@
 package com.market.demo.domain;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
-@Entity
-@Table(name = "village")
+@Entity(name = "village")
 @Getter
 @Setter
+@NoArgsConstructor
 public class Village {
 
     @Id

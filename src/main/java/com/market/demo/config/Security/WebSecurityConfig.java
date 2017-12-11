@@ -72,6 +72,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/login/**").permitAll()
                 .antMatchers("/product/**").permitAll()
                 .antMatchers("/province/**").permitAll()
+                .antMatchers("/district/**").permitAll()
                 //temporary bypass authentication for charts, coverages and airports APIs
                 //configs for swagger
                 .antMatchers("/v2/**").permitAll()

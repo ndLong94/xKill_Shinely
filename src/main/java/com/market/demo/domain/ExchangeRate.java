@@ -2,14 +2,15 @@ package com.market.demo.domain;
 
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
 
-@Entity
-@Table(name = "exchangerate")
+@Entity(name = "exchangerate")
 @Getter
 @Setter
+@NoArgsConstructor
 public class ExchangeRate {
 
     @Id

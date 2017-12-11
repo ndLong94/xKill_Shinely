@@ -1,16 +1,17 @@
 package com.market.demo.domain;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
 
 import com.market.demo.dto.TransactionDTO;
 
-@Entity
-@Table(name = "transaction")
+@Entity(name = "transaction")
 @Getter
 @Setter
+@NoArgsConstructor
 public class Transaction {
 	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -32,9 +33,6 @@ public class Transaction {
 		this.dayOfCharge = transaction.getDayOfCharge();
 	}
 
-	public Transaction() {
-		super();
-	}
-    
+
 
 }

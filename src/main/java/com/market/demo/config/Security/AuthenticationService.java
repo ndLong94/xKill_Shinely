@@ -1,10 +1,4 @@
-package com.market.demo.config.Security;/*
- *-------------------------------------------------------------------
- * Copyright (c)2017 Jeppesen
- * All Rights Reserved.
- * THIS IS UNPUBLISHED PROPRIETARY SOURCE CODE.
- * -------------------------------------------------------------------
-*/
+package com.market.demo.config.Security;
 
 import java.rmi.RemoteException;
 import java.security.NoSuchAlgorithmException;
@@ -29,7 +23,6 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.stereotype.Service;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
-import org.springframework.util.StringUtils;
 import org.springframework.web.client.HttpServerErrorException;
 import org.springframework.web.client.ResourceAccessException;
 

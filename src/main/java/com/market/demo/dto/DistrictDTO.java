@@ -2,6 +2,7 @@ package com.market.demo.dto;
 
 import javax.validation.constraints.NotNull;
 
+import com.market.demo.domain.Province;
 import lombok.Getter;
 import lombok.Setter;
 

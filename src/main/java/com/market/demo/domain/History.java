@@ -1,14 +1,15 @@
 package com.market.demo.domain;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
 
-@Entity
-@Table(name = "history")
+@Entity(name = "history")
 @Getter
 @Setter
+@NoArgsConstructor
 public class History {
 
     @Id

@@ -1,4 +1,4 @@
-package com.market.demo.controller;
+package com.market.demo.controller.Authentication;
 
 import com.market.demo.config.Controller.ControllerUtils;
 import com.market.demo.config.Security.*;
@@ -17,7 +17,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
-public class MainController {
+public class AuthenticationController {
 	@Autowired
 	UserService userService;
 

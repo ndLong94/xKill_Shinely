@@ -6,8 +6,7 @@ import javax.persistence.*;
 
 import com.market.demo.dto.CategoryDTO;
 
-@Entity
-@Table(name = "category")
+@Entity(name = "category")
 @Getter
 @Setter
 @NoArgsConstructor

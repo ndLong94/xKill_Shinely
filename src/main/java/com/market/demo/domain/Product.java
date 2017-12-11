@@ -1,16 +1,17 @@
 package com.market.demo.domain;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
 
 import com.market.demo.dto.ProductDTO;
 
-@Entity
-@Table(name = "product")
+@Entity(name = "product")
 @Getter
 @Setter
+@NoArgsConstructor
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -56,10 +57,5 @@ public class Product {
 		this.villageId = product.getVillageId();
 		this.fileUpload = product.getFileDB();
 	}
-
-	public Product() {
-		super();
-	}
-	
 
 }

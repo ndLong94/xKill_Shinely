@@ -2,16 +2,17 @@ package com.market.demo.domain;
 
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
 
 import com.market.demo.dto.ProvinceDTO;
 
-@Entity
-@Table(name = "province")
+@Entity(name = "province")
 @Getter
 @Setter
+@NoArgsConstructor
 public class Province {
 	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -20,12 +21,12 @@ public class Province {
 
     @Column(name = "provincename")
     private String provinceName;
+
+    @Column(name = "code")
+    private long code;
     
     public Province(ProvinceDTO provinceDTO) {
 		this.provinceName = provinceDTO.getProvinceName();
 	}
 
-	public Province() {
-		super();
-	}
 }
