@@ -18,11 +18,13 @@ public class Product {
     @Column(name = "productid", nullable = false)
     private Long productId;
 
-    @Column(name = "ownerid")
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name="ownerid", nullable=false)
     private Long ownerId;
 
-    @Column(name = "categoryid")
-    private Long categoryId;
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name="producttypeid", nullable=false)
+    private Long productTypeId;
 
     @Column(name = "title")
     private String title;
@@ -44,11 +46,14 @@ public class Product {
     
     @Column(name = "fileupload")
     private byte[] fileUpload;
+
+	@Column(name = "used")
+	private boolean used;
     
 	public Product(ProductDTO product) {
 		super();
 		this.ownerId = product.getOwnerId();
-		this.categoryId = product.getCategoryId();
+		this.productTypeId = product.getCategoryId();
 		this.title = product.getTitle();
 		this.description = product.getDescription();
 		this.quantity = product.getQuantity();

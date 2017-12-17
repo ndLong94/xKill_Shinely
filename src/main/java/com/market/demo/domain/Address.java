@@ -17,6 +17,7 @@ public class Address {
 	private Long addressId;
 
 	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name="districtid", nullable=false)
 	private District district;
 
 

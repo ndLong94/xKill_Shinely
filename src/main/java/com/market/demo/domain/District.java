@@ -18,14 +18,15 @@ public class District {
     @Column(name = "districtid", nullable = false)
     private Long districtId;
 
-    @Column(name = "provinceid")
-    private Long provinceId;
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name="provinceid", nullable=false)
+    private Province province;
 
     @Column(name = "districtname")
     private String districtName;
     
     public District(DistrictDTO district) {
-		this.provinceId = district.getProvinceId();
+		this.province.setProvinceId(district.getProvinceId());
 		this.districtName = district.getDistrictName();
 	}
 

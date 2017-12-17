@@ -211,7 +211,7 @@ public class ExceptionHandlingController {
     @ExceptionHandler({ JpaSystemException.class, DataAccessResourceFailureException.class,
             HibernateException.class, DataAccessException.class })
     public ResponseEntity<Object> catchDBConnectionException(RuntimeException ue) {
-        String message = "Connection db ";
+        String message = "Database issue!";
         logger.error(message, ue);
         return ControllerUtils.createErrorResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR, message);
     }
