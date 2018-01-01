@@ -20,7 +20,7 @@ public class ProductType {
 	private String typeName;
 
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name="categoryid", nullable=false)
-	private Category category;
+	@JoinColumn(name="productid", nullable=false)
+	private Product product;
 
 }

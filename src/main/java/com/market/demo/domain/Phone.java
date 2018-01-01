@@ -16,9 +16,8 @@ public class Phone {
 	@Column(name = "phoneid", nullable = false)
 	private Long phoneId;
 
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name="product", nullable=false)
-	private Product product;
+	@Column(name="producttypeId", nullable=false)
+	private Long producttypeId;
 
 	@Column(name = "brand")
 	private String brand;

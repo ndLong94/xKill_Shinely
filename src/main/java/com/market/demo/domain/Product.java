@@ -4,6 +4,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import javax.persistence.*;
 
 import com.market.demo.dto.ProductDTO;
@@ -20,11 +23,15 @@ public class Product {
 
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name="ownerid", nullable=false)
-    private Long ownerId;
-
+    private User user;
+	
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name="producttypeid", nullable=false)
-    private Long productTypeId;
+	@JoinColumn(name="categoryId", nullable=false)
+	private Category category;
+	
+//	@ManyToOne(fetch = FetchType.LAZY)
+//	@JoinColumn(name="producttypeid", nullable=false)
+//    private ProductType productType;
 
     @Column(name = "title")
     private String title;
@@ -50,10 +57,14 @@ public class Product {
 	@Column(name = "used")
 	private boolean used;
     
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "product")
+	private Set<ProductType> productTypes = new HashSet<ProductType>(0);
+	
+	
 	public Product(ProductDTO product) {
 		super();
-		this.ownerId = product.getOwnerId();
-		this.productTypeId = product.getCategoryId();
+		this.user.setUserId(product.getOwnerId());
+		this.category.setCategoryId(product.getCategoryId());
 		this.title = product.getTitle();
 		this.description = product.getDescription();
 		this.quantity = product.getQuantity();
@@ -61,6 +72,20 @@ public class Product {
 		this.expireDate = product.getExpireDate();
 		this.villageId = product.getVillageId();
 		this.fileUpload = product.getFileDB();
+	}
+	
+	public Product(ProductDTO product, Set<ProductType> productTypes) {
+		super();
+		this.user.setUserId(product.getOwnerId());
+		this.category.setCategoryId(product.getCategoryId());
+		this.title = product.getTitle();
+		this.description = product.getDescription();
+		this.quantity = product.getQuantity();
+		this.postDate = product.getPostDate();
+		this.expireDate = product.getExpireDate();
+		this.villageId = product.getVillageId();
+		this.fileUpload = product.getFileDB();
+		this.productTypes = productTypes;
 	}
 
 }
