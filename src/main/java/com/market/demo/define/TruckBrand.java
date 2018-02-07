@@ -30,7 +30,7 @@ public enum TruckBrand {
     TRUONG_GIANG("TRƯỜNG GIANG"),
     VINASUKI("Vinasuki"),
     VEAM("Veam"),
-    OTHER("Other");
+    OTHER("Hãng khác");
     
     
     private String brand;

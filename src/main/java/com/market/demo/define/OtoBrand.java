@@ -78,8 +78,7 @@ public enum OtoBrand {
     VOLKSWAGEN("Volkswagen"),
     VOLVO("Volvo"),
     ZOTYE("Zotye"),        
-    OTHER("Other");
-    
+    OTHER("Hãng khác");
     
     private String brand;
 

@@ -5,7 +5,7 @@ public enum TabletBrand {
     ASUS("Asus"),
     LENOVO("Lenovo"),
     SAMSUNG("Samsung"),
-    OTHER("Other");
+    OTHER("Hãng khác");
 
     private String brand;
 

@@ -1,7 +1,9 @@
 package com.market.demo.define;
 
 public enum Status {
-    NEW("new"), WARRANTY("warranty"), OLD("old");
+    NEW("Còn mới"), 
+    WARRANTY("Còn bảo hành"),
+    OLD("Sản phẩm cũ");
 
     private String status;
 

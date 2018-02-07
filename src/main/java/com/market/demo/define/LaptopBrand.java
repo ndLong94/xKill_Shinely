@@ -11,7 +11,7 @@ public enum LaptopBrand {
     TOSHIBA("Toshiba"),
     SONY("Sony"),
     MSI("MSI"),
-    OTHER("Other");
+    OTHER("Hãng khác");
 
     private String brand;
 

@@ -19,7 +19,7 @@ public enum PhoneBrand {
     XIAOMI("Xiaomi"),
     MASSTEL("MASSTEL"),
     LANDROVER("LAND ROVER"), 
-    OTHER("Other");
+    OTHER("Hãng khác");
 
     private String brand;
 

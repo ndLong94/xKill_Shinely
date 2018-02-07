@@ -1,12 +1,13 @@
 package com.market.demo.define;
 
-public enum Demand {
-    BUY("buy"), 
-    SELL("sell");
+public enum OtoFuelUsingType {
+    GAS("Xăng"),
+    OIL("Dầu"),
+    HYBRID("Động cơ Hybrid");
 
     private String demand;
 
-    private Demand(String demand) {
+    private OtoFuelUsingType(String demand) {
         this.demand = demand;
     }
 

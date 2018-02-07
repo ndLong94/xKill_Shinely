@@ -36,7 +36,7 @@ public enum MotorBikeBrand {
     Victory("Victory"),
     VISITOR("Regal Raptor"),
     DAELIM("Daelim"),
-    OTHER("Other");
+    OTHER("Hãng khác");
 
     private String brand;
 
