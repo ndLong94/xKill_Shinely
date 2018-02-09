@@ -27,7 +27,7 @@ public enum OtoKIAType {
     LOTZE("Lotze"),
     MAGENTIS("Magentis"),
     OPIRUS("Opirus"), 
-    OPTIMA("Jeep"),
+    OPTIMA("Optima"),
     PICANTO("Picanto"),   
     POTENTIA("Potentia"), 
     PREGIO("Pregio"),
